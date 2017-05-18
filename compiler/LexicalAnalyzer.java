@@ -27,39 +27,16 @@ public class LexicalAnalyzer {
   public static enum TokenType {
     // Token types cannot have underscores
 	  
-	  //teja("([a-zA-Z][0-9a-zA-Z_]*)"),
 	  WHITESPACE("[ \t\f\r\n]+"),
 	  ERROR("([0-9]*\\.[0-9]*\\.[0-9]*\\.[0-9]*)+"),
 	  FRACTION("((\\.[0-9]*[1-9])|(\\.0))"),
-	  //OP("==|=|\\+|(|<>|)|<|\\*|\\{|>|/|\\}|<=|[|>=|and|]|;|int|not|,|or|\\.|put|if|void|then|main|else|for|class|int|float|get|return"),
-	  //OP("\\(|\\)|\\{|\\}|\\==|\\=|;|%|int|not|,|or|\\.|put|if|\\void|then|main|else|for|class|int|float|get|return"),
 	  OP("\\[|\\]|\\(|\\)|\\{|\\}|\\==|\\=|;|%|,|\\.|\\!|\\@|\\#|\\$|\\^|\\&|\\/|\\*|\\++|\\--|\\+|-|<>|<=|>=|<|>"),
 	  ID("([a-zA-Z][0-9a-zA-Z_]*)"),
-	 // FLOAT("([1-9][0-9]*|0)((\\.[0-9]*[1-9])|(\\.0))"),
-	 // NUM("(([1-9][0-9]*|0)|([[1-9][0-9]*|0][\\.[0-9]*[1-9]|\\.0]))"),
-	  //NUM("(([1-9][0-9]*|0) | ([1-9][0-9]*|0)((\\.[0-9]*[1-9])|(\\.0)))"),
-	  //NUM("(([1-9][0-9]*|[0])|(([1-9][0-9]*|[0])(([.][0-9]*[1-9])|([.][0]))))"),
-	  //NUM("(([1-9][0-9]*|[0])|(([1-9][0-9]*|[0])(([.][0-9]*[1-9])|([.][0]))))"),
 	  NUM("([0-9]*[.])?[0-9]+"),
 	  ALPHA("([a-zA-Z |_])");
 	  
 	  
-	  //NONZERO("[1-9]"),
-	  //LETTER("[a-zA-Z]"),
-	  //FRACTION("((.[0-9]*[1-9])|(.0))"),
-	  //INTEGER("([1-9][0-9]*|0)"),
-	  //FLOAT("([1-9][0-9]*|0)((.[0-9]*[1-9])|(.0))"),
-	  
-	  //ravi("\\d+(\\.\\d+)?"),
-	  //DIGIT("[0-9]");
-	  
-	  
-	 // NUMBERRAVI("-?[0-9]+"), BINARYOP("[*|/|+|-]"), WHITESPACE("[ \t\f\r\n]+"),
-    //id (letter alphanum*), alphanum ("letter | digit | _ "),num = integer | float,
-    
-    
-
-    public final String pattern;
+	     public final String pattern;
 
     private TokenType(String pattern) {
       this.pattern = pattern;
