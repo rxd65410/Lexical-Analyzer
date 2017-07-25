@@ -82,7 +82,6 @@ public class LexicalAnalyzer {
     	  fraction.add(matcher.group(TokenType.FRACTION.name().toString()));
     	  continue;
       }else if (matcher.group(TokenType.OP.name()) != null) {
-          //tokens.add(new Token(TokenType.OP, matcher.group(TokenType.OP.name())));
     	  String idTemp = matcher.group(TokenType.OP.name().toString());
     	  if(Arrays.asList(VALID_OPER).contains(idTemp)){
           	oper.add(idTemp);
